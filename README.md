@@ -32,7 +32,7 @@ To set up [Tailscale](https://tailscale.com) on a DD-WRT capable router, you'll 
    -  Go to **Administration > Managment**
         - **Reboot Router** and your drive should be automatically mounted on `/opt`
      
-        ![USB](images/Services-USB.jpg)
+        ![USB](https://github.com/alf45tar/DD-WRT-TimeMachine/blob/main/images/Services-USB.jpg)
 
 4. Connect to your router via Terminal
 
