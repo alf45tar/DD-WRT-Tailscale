@@ -89,7 +89,7 @@ To set up Tailscale on a DD-WRT capable router, you'll need to configure the rou
    ```
    It seems that the default `tailscale` package tries to execute some instructions which are not available on all processors. The `_nohf` variant takes care of this.
 
-8. Edit `/opt/etc/init.d/S06tailscaled` to add `--tun=userspace-networking`
+7. Edit `/opt/etc/init.d/S06tailscaled` to append `--tun=userspace-networking` to `ARGS`
    ```
    #!/bin/sh
 
@@ -104,9 +104,26 @@ To set up Tailscale on a DD-WRT capable router, you'll need to configure the rou
    ```
    It appears that the `tun` kernel module is missing and not available on Entware, at least not for DD-WRT. Luckily, it looks like tailscale's `userspace-networking` option still works.
    
-10. Run the following commands to temporary add groups and users and run Entware services (Avahi, Samba)
+8. Run Entware services
     ```
     /opt/etc/init.d/rc.unslung start
+    ```
+
+9. Run `tailscale version` command to check `tailscaled` daemon installation
+    ```
+    root@tailscalerouter:~# tailscale version
+    1.78
+      tailscale commit: 1b41fded
+      go version: go1.23.4
+   ```
+
+10. Follow normal `tailscale` node installation command
+    ```
+    tailscale up
+    ```
+    or for act as subnet router
+    ```
+    tailscale up --advertise-routes=192.168.1.0/24
     ```
     
 13. Add startup and shutdown scripts
