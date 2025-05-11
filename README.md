@@ -1,6 +1,6 @@
 # Tailscale on DD-WRT
 
-To set up Tailscale on a DD-WRT capable router, you'll need to configure the router to support *direct-attached storage* (DAS) and then enable *Tailscale*. Here's a step-by-step guide to help you through the process.
+To set up [Tailscale](https://tailscale.com) on a DD-WRT capable router, you'll need to configure the router to support *direct-attached storage* (DAS) and then install and configure *Tailscale* from Entware. Here's a step-by-step guide to help you through the process.
 
 ## Prerequisites
 
@@ -148,4 +148,4 @@ To set up Tailscale on a DD-WRT capable router, you'll need to configure the rou
     -  Go to **Administration > Managment**
         - **Reboot Router**
 
-15. After reboot you are ready to 
+15. After reboot enjoy your tailnet.
