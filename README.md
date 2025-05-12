@@ -111,7 +111,7 @@ To set up [Tailscale](https://tailscale.com) on a DD-WRT capable router, you'll 
 
 9. Run `tailscale version` command to check `tailscaled` daemon installation
     ```
-    root@tailscalerouter:~# tailscale version
+    root@TailscaleRouter:~# tailscale version
     1.78
       tailscale commit: 1b41fded
       go version: go1.23.4
@@ -119,8 +119,13 @@ To set up [Tailscale](https://tailscale.com) on a DD-WRT capable router, you'll 
 
 10. Follow normal `tailscale` node installation command
     ```
-    tailscale up
+    root@Tailscale Casa:~# tailscale up
+
+    To authenticate, visit:
+
+	    https://login.tailscale.com/a/188e624b013a7f
     ```
+    
     or for act as subnet router
     ```
     tailscale up --advertise-routes=192.168.1.0/24
