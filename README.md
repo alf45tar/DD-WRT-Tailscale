@@ -119,18 +119,17 @@ To set up [Tailscale](https://tailscale.com) on a DD-WRT capable router, you'll 
 
 10. Follow normal `tailscale` node installation command
     ```
-    root@Tailscale Casa:~# tailscale up
+    root@TailscaleRouter:~# tailscale up
 
     To authenticate, visit:
 
 	    https://login.tailscale.com/a/188e624b013a7f
     
     Success.
-    Some peers are advertising routes but --accept-routes is false
     ```
     or for act as subnet router
     ```
-    tailscale up --advertise-routes=192.168.1.0/24
+    tailscale up --advertise-routes=192.168.1.0/24 --accept-routes
     ```
     
 13. Add startup and shutdown scripts
