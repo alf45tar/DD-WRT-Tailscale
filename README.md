@@ -124,8 +124,10 @@ To set up [Tailscale](https://tailscale.com) on a DD-WRT capable router, you'll 
     To authenticate, visit:
 
 	    https://login.tailscale.com/a/188e624b013a7f
-    ```
     
+    Success.
+    Some peers are advertising routes but --accept-routes is false
+    ```
     or for act as subnet router
     ```
     tailscale up --advertise-routes=192.168.1.0/24
